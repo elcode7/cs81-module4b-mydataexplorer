@@ -72,3 +72,12 @@ function findHighestScreenTime() {
     currentDay.screenTime > maxDay.screenTime ? currentDay : maxDay
   );
 }
+
+
+// 2. Calculate average sleep hours for the week
+function averageSleep() {
+  const totalSleep = weekData.reduce(
+    (sum, day) => sum + day.sleepHours,
+    0
+  );
+  return totalSleep / weekData.length;
