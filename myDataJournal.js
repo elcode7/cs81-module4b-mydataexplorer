@@ -72,6 +72,7 @@ function findHighestScreenTime() {
     currentDay.screenTime > maxDay.screenTime ? currentDay : maxDay
   );
 }
+console.log("Highest screen time:", findHighestScreenTime());
 
 
 // 2. Calculate average sleep hours for the week
@@ -81,6 +82,7 @@ function averageSleep() {
     0
   );
   return totalSleep / weekData.length;
+console.log("Average sleep hours:", averageSleep());  
 
 // 3. Find the most frequent mood
 function mostFrequentMood() {
@@ -94,7 +96,9 @@ function mostFrequentMood() {
     moodCount[a] > moodCount[b] ? a : b
   );
 }
+ console.log("Most frequent mood:", mostFrequentMood());
 
+  
 // 4. Explore relationship between caffeine and focus
 function correlateCaffeineToFocus() {
   return weekData.map(day => ({
@@ -103,3 +107,4 @@ function correlateCaffeineToFocus() {
     focus: day.focusLevel
   }));
 }
+console.log("Caffeine vs Focus:", correlateCaffeineToFocus());
