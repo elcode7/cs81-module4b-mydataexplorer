@@ -1,10 +1,10 @@
 /*
-MODULE 4 – Weekly Data Journal
+Weekly Data Journal
 
-PREDICTIONS (before coding):
+PREDICTIONS
 - The day with the most screen time will likely be a weekday (probably Wednesday).
 - Best focus day will be a day with more sleep and less screen time.
-- More caffeine might help focus a little, but too much probably doesn’t.
+- More caffeine might help focus a little.
 */
 
 const weekData = [
@@ -66,3 +66,9 @@ const weekData = [
   }
 ];
 
+// 1. Find the day with the highest screen time
+function findHighestScreenTime() {
+  return weekData.reduce((maxDay, currentDay) =>
+    currentDay.screenTime > maxDay.screenTime ? currentDay : maxDay
+  );
+}
