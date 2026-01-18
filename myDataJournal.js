@@ -81,3 +81,16 @@ function averageSleep() {
     0
   );
   return totalSleep / weekData.length;
+
+// 3. Find the most frequent mood
+function mostFrequentMood() {
+  const moodCount = {};
+
+  weekData.forEach(day => {
+    moodCount[day.mood] = (moodCount[day.mood] || 0) + 1;
+  });
+
+  return Object.keys(moodCount).reduce((a, b) =>
+    moodCount[a] > moodCount[b] ? a : b
+  );
+}
