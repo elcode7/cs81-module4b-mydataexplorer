@@ -94,3 +94,12 @@ function mostFrequentMood() {
     moodCount[a] > moodCount[b] ? a : b
   );
 }
+
+// 4. Explore relationship between caffeine and focus
+function correlateCaffeineToFocus() {
+  return weekData.map(day => ({
+    day: day.day,
+    caffeine: day.caffeineIntake,
+    focus: day.focusLevel
+  }));
+}
